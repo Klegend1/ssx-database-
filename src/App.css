@@ -1,0 +1,50 @@
+body {
+  background-color: rgb(69, 115, 155); /* Set background color to black */
+  color: rgb(0, 0, 0); /* Set text color to white for readability */
+  font-family: Arial, sans-serif; /* Optional: set a font for the page */
+}
+.character-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.character-card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.character-image {
+  width: 100%;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.character-stats {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.character-stats ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.character-stats li {
+  margin: 5px 0;
+}
+
+/* Logo container styling */
+.logo-container {
+  text-align: center; /* Center the logo */
+  margin-bottom: 20px; /* Space between logo and heading */
+}
+
+.ssx-logo {
+  width: 400px; /* Adjust the logo size */
+  height: auto; /* Maintain aspect ratio */
+}

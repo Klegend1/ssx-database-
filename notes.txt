@@ -1,0 +1,77 @@
+WHAT WE NEED 
+
+. Name
+. Bio
+. Stats (e.g., speed, trick, style, stamina)
+. Image URL
+
+
+
+
+import React from 'react';
+
+function CharacterList({ characters, onDelete, onUpdate }) {
+  return (
+    <div>
+      <h2>Character List</h2>
+      <ul>
+        {characters.map((character) => (
+          <li key={character.id}>
+            <h3>{character.name}</h3>
+            <p>{character.bio}</p>
+            <img src={character.image} alt={character.name} width="150" />
+            <p>
+              <strong>Speed:</strong> {character.stats.speed} | 
+              <strong> Trick:</strong> {character.stats.trick} | 
+              <strong> Style:</strong> {character.stats.style} | 
+              <strong> Stamina:</strong> {character.stats.stamina}
+            </p>
+            <button onClick={() => onDelete(character.id)}>Delete</button>
+            <button
+              onClick={() =>
+                onUpdate(character.id, { bio: "Updated Bio" })
+              }
+            >
+              Update Bio
+            </button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default CharacterList;
+
+
+Solo - MVP
+✅ Any items marked incomplete in this section will require you to use your one redo to re-submit them. Your project must fulfill the below requirements.
+
+The front-end application is built with React.
+The front-end application is well-styled, using CSS Flex and/or CSS Grid for layout.
+Utilizes a 3rd party CSS / react component library (MUI, Tailwind Bulma, or Chakra).
+Consumes data from 1-2 third-party APIs.
+The front-end application does not hold any secret keys. Public APIs that require secret keys [must be accessed from a back-end application(https://pages.git.generalassemb.ly/modular-curriculum-all-courses/fetching-data-in-react/securing-api-keys/).
+The project is deployed online so that the rest of the world can use it.
+
+SOLO stretch options
+
+Implements a highly dynamic UI (animations) or data visualization feature.
+Implements a lightweight data solution like AirTable.
+Implement 3rd party OAuth2 solution.
+
+
+
+
+Tailwind breakdowns 
+
+bg-cover, bg-center: Used for the hero section to make the background image cover the full area.
+h-[500px]: Custom height for the hero section.
+container mx-auto: Centers content horizontally.
+grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8: For responsive grid layout of games.
+text-white, text-gray-400: Styling text colors.
+rounded-lg, shadow-lg: For card-like styling around the games.
+space-x-6, space-y-8: Provides spacing between navigation items or other elements.
+bg-cover: Ensures that the image covers the entire section.
+bg-center: Centers the background image.
+bg-no-repeat: Prevents the background from repeating.
